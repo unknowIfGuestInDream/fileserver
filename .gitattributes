@@ -7,9 +7,10 @@
 
 # These files are text and should be normalized (Convert crlf => lf)
 *.bash          text eol=lf
-*.css           text diff=css
+*.css           linguist-vendored
+*.js            linguist-vendored
 *.htm           text diff=html
-*.html          text diff=html
+*.html          linguist-vendored
 *.java          text diff=java
 *.sh            text eol=lf
 
@@ -20,7 +21,6 @@
 *.py            linguist-language=Python
 *.bat           linguist-language=Shell
 *.vbs           linguist-language=Shell
-src/main/resources/public/**        linguist-vendored
 
 # Ensure the following are treated as binary.
 # # (binary is a macro for -text -diff)
