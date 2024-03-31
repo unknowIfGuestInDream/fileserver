@@ -20,6 +20,7 @@
 *.py            linguist-language=Python
 *.bat           linguist-language=Shell
 *.vbs           linguist-language=Shell
+src/main/resources/public/*        linguist-vendored
 
 # Ensure the following are treated as binary.
 # # (binary is a macro for -text -diff)
