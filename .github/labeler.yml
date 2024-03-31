@@ -1,0 +1,23 @@
+enhancement:
+  - changed-files:
+      - any-glob-to-any-file: [ 'src/main/**', '!src/main/resources/lib' ]
+
+test:
+  - changed-files:
+      - any-glob-to-any-file: src/test/**
+
+workflow:
+  - changed-files:
+      - any-glob-to-any-file: .github/**
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: [ 'CHANGELOG.md' ,'LICENSE' ,'README.md' ,'docs/**' ]
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file: [ 'pom.xml' ,'src/main/resources/lib/**' ]
+
+automerge:
+  - changed-files:
+      - any-glob-to-any-file: [ 'CONTRIBUTORS.md', 'CHANGELOG.md', 'README.md' ]
