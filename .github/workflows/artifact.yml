@@ -32,7 +32,6 @@ permissions:
 jobs:
   package:
     runs-on: ubuntu-latest
-    needs: prepare
     continue-on-error: false
     steps:
       - uses: actions/checkout@v4
