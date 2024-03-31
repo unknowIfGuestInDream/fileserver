@@ -1,0 +1,30 @@
+server:
+  port: 3010
+  shutdown: graceful
+spring:
+  application:
+    name: file-server
+  jackson:
+    date-format: yyyy/MM/dd HH:mm:ss
+    time-zone: GMT+8
+  mvc:
+    static-path-pattern: /static/**
+    format:
+      date: yyyy-MM-dd
+      date-time: yyyy-MM-dd HH:mm:ss
+      time: HH:mm:ss
+  web:
+    resources:
+      static-locations: file:E:/javaWorkSpace/fileserver/src/main/resources/static
+  threads:
+    virtual:
+      enabled: true
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+logging:
+  level:
+    root: info
