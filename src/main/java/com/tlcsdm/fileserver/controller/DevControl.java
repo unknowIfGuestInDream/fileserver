@@ -54,24 +54,49 @@
 
 package com.tlcsdm.fileserver.controller;
 
+import com.tlcsdm.fileserver.annotation.Log;
+import com.tlcsdm.fileserver.utils.BaseUtils;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Map;
 
 /**
- * 通用模块
+ * @author unknowIfGuestInDream
  */
 @RestController
 @RequiredArgsConstructor
-public class CommonController {
+public class DevControl {
 
-    /**
-     * 目录
-     */
-    @GetMapping("/")
-    public ModelAndView index() {
-        return new ModelAndView("pages/index");
+    @GetMapping("get")
+    @Log(title = "通用模块", operateType = "get")
+    public Map<String, Object> get(String name) {
+        System.out.println(name);
+        return BaseUtils.success("get");
     }
 
+    @PostMapping("post")
+    @Log(title = "通用模块", operateType = "get")
+    public Map<String, Object> post(String name) {
+        System.out.println(name);
+        return BaseUtils.success("get");
+    }
+
+    @PutMapping("put")
+    @Log(title = "通用模块", operateType = "put")
+    public Map<String, Object> put(String name) {
+        System.out.println(name);
+        return BaseUtils.success("put");
+    }
+
+    @DeleteMapping("delete")
+    @Log(title = "通用模块", operateType = "delete")
+    public Map<String, Object> delete(String name) {
+        System.out.println(name);
+        return BaseUtils.success("delete");
+    }
 }
