@@ -22,4 +22,4 @@ jobs:
           java-version: ${{ matrix.java }}
           distribution: 'temurin'
       - name: Build Project
-        run: ./mvnw -B -C -V -ntp clean package
+        run: ./mvnw -B clean package --file pom.xml

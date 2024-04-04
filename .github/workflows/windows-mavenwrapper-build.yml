@@ -1,7 +1,7 @@
 name: Windows Maven Wrapper Build
 
 env:
-  MAVEN_ARGS: -B -C -V -ntp -Dhttp.keepAlive=false -e
+  MAVEN_ARGS: -B
 
 on:
   push:
@@ -25,4 +25,4 @@ jobs:
           java-version: ${{ matrix.java }}
           distribution: 'temurin'
       - name: Build Project
-        run: ./mvnw.cmd %MAVEN_ARGS% clean package
+        run: ./mvnw.cmd %MAVEN_ARGS% clean package --file pom.xml
