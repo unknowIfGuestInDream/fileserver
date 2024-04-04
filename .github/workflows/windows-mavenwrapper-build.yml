@@ -1,0 +1,30 @@
+name: Windows Maven Wrapper Build
+
+env:
+  MAVEN_ARGS: -B
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    name: Windows Java ${{ matrix.java }} Maven Wrapper
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        java: [ '21' ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: 'temurin'
+      - name: Build Project
+        run: |
+          mvn -N io.takari:maven:wrapper
+          ./mvnw.cmd %MAVEN_ARGS% clean package
