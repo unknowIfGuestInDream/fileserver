@@ -16,6 +16,9 @@
 .gitattributes                @unknowIfGuestInDream
 .gitignore                    @unknowIfGuestInDream
 
+# Deploy
+script/**                     @unknowIfGuestInDream
+
 # Server
 src/main/java/com/tlcsdm/fileserver/**      @unknowIfGuestInDream
 src/main/resources/**                       @unknowIfGuestInDream
