@@ -33,3 +33,10 @@ spring:
 logging:
   level:
     root: info
+thread:
+  enabled: true
+  corePoolSize: 2
+  maxPoolSize: 50
+  queueCapacity: 1000
+  keepAliveSeconds: 30
+  threadNamePrefix: fs-
