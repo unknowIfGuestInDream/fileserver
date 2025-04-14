@@ -51,7 +51,7 @@ jobs:
           cp target/fileserver.jar ${result_path}/fileserver.jar
           cp target/fileserver-javadoc.jar ${result_path}/fileserver-javadoc.jar
           cp target/fileserver-sources.jar ${result_path}/fileserver-sources.jar
-          cp -r target/apidocs ${result_path}/apidocs
+          cp -r target/reports/apidocs ${result_path}/apidocs
       - name: Artifact
         uses: actions/upload-artifact@v4
         with:
